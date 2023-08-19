@@ -12,108 +12,19 @@ class ContactListPage extends StatelessWidget {
       ),
       //children are nothing than list widget this is ths syntax for creaing list
       //to make the the children column heugh match we use mainaxisSize
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: const <Widget>[
-            Text(
-              "Contact test",
+      //long vertical list overflow the screen pixel to overcome the problem we can use listview which can have scrooable feature
+      //replacing column to list view and it doestnot have mainaxissize
+      //we have bunch of text widget which are all same .there are tqwo way to populate this thing 1 by erespifying this or using builder
+      body: ListView.builder(
+        itemCount: 30,
+        itemBuilder: (context, index) {
+          return const Center(
+            child: Text(
+              "Contact list",
               style: TextStyle(fontSize: 30),
             ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              "Contact test",
-              style: TextStyle(fontSize: 30),
-            ),
-          ],
-        ),
+          );
+        },
       ),
     );
   }
