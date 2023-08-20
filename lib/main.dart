@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Contacts',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const ContactListPage(),
+      home:  ContactListPage(),
     );
   }
 }

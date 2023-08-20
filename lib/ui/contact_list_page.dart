@@ -1,8 +1,13 @@
+
+
 import 'package:flutter/material.dart';
+import 'package:faker/faker.dart' as faker;
+
+import '../data/contacts.dart'; // for different user data
 
 class ContactListPage extends StatelessWidget {
-  const ContactListPage({super.key});
-
+//underscore acts like a private asscess modifier
+late List<Contact> _contacts=List.generate(50, (index) => return );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,11 +22,12 @@ class ContactListPage extends StatelessWidget {
       //we have bunch of text widget which are all same .there are tqwo way to populate this thing 1 by erespifying this or using builder
       body: ListView.builder(
         itemCount: 30,
+        //run & build every single list item
         itemBuilder: (context, index) {
-          return const Center(
+          return Center(
             child: Text(
-              "Contact list",
-              style: TextStyle(fontSize: 30),
+              faker.Person().firstName() + ''+ faker.Person().lastName(),
+              style: const TextStyle(fontSize: 30),
             ),
           );
         },
